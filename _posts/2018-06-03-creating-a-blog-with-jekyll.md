@@ -4,7 +4,7 @@ title:  "Creating a blog with Jekyll"
 date:   2018-06-03 18:00:00 -0300
 categories: tutorial jekyll
 ---
-In my first post I'm writing how to create a blog using Jekyll for to host in github.
+In this post I'm writing how to create a blog using Jekyll for to host in github.
 This tutorial was created watching the Jekyll's course by Willian Justen in Udemy.
 
 ## Installing Jekyll
