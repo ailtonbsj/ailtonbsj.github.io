@@ -32,4 +32,5 @@ Type the name of package and click on it.
 | [CodeFormatter](https://packagecontrol.io/packages/CodeFormatter)                               | Autoformat your code          | Ctrl+S               |
 | [phpfmt](https://packagecontrol.io/packages/phpfmt)                                             | Autoformat PHP. (need php).   | Use CodeFormatter    |
 | [SublimeCodeIntel](https://packagecontrol.io/packages/SublimeCodeIntel)                         | Autocomplete code.            |                      |
+| [Bracket​Highlighter](https://packagecontrol.io/packages/BracketHighlighter)                    | Bracket and tag highlighter.  |                      |
 
