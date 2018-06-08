@@ -28,10 +28,13 @@ postgres-# \password postgres
 
 Now you can use PgAdmin4 to connect the database!
 
-Let install PHP and dependencies to access the database:
+Lets install PHP and dependencies to access the database:
 ```
 $ sudo apt install php
 $ sudo apt install php-pgsql
+$ sudo apt install php-xml
+$ sudo apt install php-zip
+$ sudo apt install php-mbstring
 ```
 
 You can run the embed webserver with:
