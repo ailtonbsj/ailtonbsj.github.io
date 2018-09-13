@@ -22,15 +22,16 @@ Type the name of package and click on it.
 
 ## Some iteresting packages
 
-| Name                                                                                            | Description                   | Common commands      |
-|:------------------------------------------------------------------------------------------------|:------------------------------|:---------------------|
-| [HTML5](https://packagecontrol.io/packages/HTML5)                                               | Snippets for HTML5.           | html5                |
-| [HTML Snippets](https://packagecontrol.io/packages/HTML%20Snippets)                             | Snippets for HTML.            | doctype, meta, lorem |
-| [Java​Script & NodeJS](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets) | Snippets for Javscript.       | cl, gi, fn           |
-| [HTMLBeautify](https://packagecontrol.io/packages/HTMLBeautify)                                 | Autoformat HTML code          | Ctrl+Alt+Shift+F     |
-| [Markdown Table Formatter](https://packagecontrol.io/packages/Markdown%20Table%20Formatter)     | Autoformat tables in markdown | Ctrl+Alt+Shift+T     |
-| [CodeFormatter](https://packagecontrol.io/packages/CodeFormatter)                               | Autoformat your code          | Ctrl+S               |
-| [phpfmt](https://packagecontrol.io/packages/phpfmt)                                             | Autoformat PHP. (need php).   | Use CodeFormatter    |
-| [SublimeCodeIntel](https://packagecontrol.io/packages/SublimeCodeIntel)                         | Autocomplete code.            |                      |
-| [Bracket​Highlighter](https://packagecontrol.io/packages/BracketHighlighter)                    | Bracket and tag highlighter.  |                      |
+| Name                                                                                          | Description                   | Common commands      |
+|:----------------------------------------------------------------------------------------------|:------------------------------|:---------------------|
+| [HTML5](https://packagecontrol.io/packages/HTML5)                                             | Snippets for HTML5.           | html5                |
+| [HTML Snippets](https://packagecontrol.io/packages/HTML%20Snippets)                           | Snippets for HTML.            | doctype, meta, lorem |
+| [Java​Script/NodeJS](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets)  | Snippets for Javscript.       | cl, gi, fn           |
+| [HTMLBeautify](https://packagecontrol.io/packages/HTMLBeautify)                               | Autoformat HTML code          | Ctrl+Alt+Shift+F     |
+| [Markdown Table Formatter](https://packagecontrol.io/packages/Markdown%20Table%20Formatter)   | Autoformat tables in markdown | Ctrl+Alt+Shift+T     |
+| [CodeFormatter](https://packagecontrol.io/packages/CodeFormatter)                             | Autoformat your code          | Ctrl+S               |
+| [phpfmt](https://packagecontrol.io/packages/phpfmt)                                           | Autoformat PHP. (need php).   | Use CodeFormatter    |
+| [SublimeCodeIntel](https://packagecontrol.io/packages/SublimeCodeIntel)                       | Autocomplete code.            |                      |
+| [Bracket​Highlighter](https://packagecontrol.io/packages/BracketHighlighter)                   | Bracket and tag highlighter.  |                      |
+| [Markdown HTML Preview](https://packagecontrol.io/packages/Markdown%20HTML%20Preview)         | Markdown HTML Preview         | Ctrl+Shift+M         |
 
