@@ -9,7 +9,7 @@ This is a list of some utils command for linux and pentest:
 # Start webserver
 service apache2 start
 
-# See all open port
+# See all opened port
 netstat -nlpt
 
 # See logs apache
@@ -22,6 +22,7 @@ curl 192.168.1.1
 nc -v site.com 80
 
 # Listen a TCP port
+# Need use package netcat-traditional
 nc -nlp 6000 -e /bin/bash
 
 # Reverse Conection to TCP port
@@ -40,7 +41,7 @@ whois site.com
 dnsenum --enum site.com
 fierce -dns site.com
 
-# resolve dns name to ip
+# resolve dns name to IP
 host www.site.com
 host -t ns site.com
 
