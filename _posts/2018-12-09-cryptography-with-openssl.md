@@ -7,7 +7,7 @@ categories: tutorial linux hacker
 We can use OpenSSL to do a several operations related with cryptography. The command below are the most commons options.
 
 ## Symmetric-key Encryption
-```
+```bash
 # List all Ciphers
 openssl list -cipher-algorithms
 
@@ -19,7 +19,7 @@ openssl aes-256-cbc -d -in seguro_aes.txt -out novo.txt
 ```
 
 ## Asymmetric-key Encryption
-```
+```bash
 # Generate private key
 openssl genrsa -out priv.pem 1024 
 # openssl rsa -in priv.pem -text -noout
@@ -36,7 +36,7 @@ openssl rsautl -decrypt -inkey priv.pem -in seguro_rsa.enc > novo_rsa.txt
 ```
 
 ## Digital signature
-```
+```bash
 # Signing
 cat text.txt | openssl dgst -sha256 | cut -f 2 -d " " > soma.txt
 openssl pkeyutl -sign -inkey priv.pem -in soma.txt | openssl enc -base64 > sign.base64

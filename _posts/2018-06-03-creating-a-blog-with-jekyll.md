@@ -8,7 +8,7 @@ In this post I'm writing how to create a blog using Jekyll for to host in github
 This tutorial was created watching the Jekyll's course by Willian Justen in Udemy.
 
 ## Installing Jekyll
-```
+```bash
 $ sudo apt install ruby
 
 $ sudo apt install ruby-dev
@@ -21,7 +21,7 @@ $ sudo gem install minima
 ```
 
 ## Creating a Blog
-```
+```bash
 $ jekyll new name-of-your-blog
 
 $ cd name-of-your-blog
@@ -32,7 +32,7 @@ $ jekyll s
 ```
 
 ## Creating a Blog with your look
-```
+```bash
 $ jekyll new name-of-your-blog
 
 $ cd name-of-your-blog
@@ -45,7 +45,7 @@ $ bundle exec jekyll s
 ```
 
 ## Extras
-```
+```bash
 jekyll --help
 
 bundle show minima

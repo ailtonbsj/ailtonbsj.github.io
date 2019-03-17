@@ -4,7 +4,7 @@ title:  "Some utils commands to monitoring and logging user and system"
 date:   2019-03-16 21:54:00 -0300
 categories: tutorial linux hacker
 ---
-This is a list of some utils:
+This is a list of some utils commands from linux:
 ```bash
 # Tell how long the system has been running
 uptime -s

@@ -7,19 +7,19 @@ categories: tutorial linux driver
 I have installed Lubuntu 18.04 LTS on a Positivo Master N190I Notebook, but the wifi adapter didn't work with this SO. Searching the solution I had to install a package from xenial to do the adapter work correctly.
 
 First verify if you have a Realtek RTL8723AE using this command:
-```
+```bash
 lspci | grep Wireless
 ```
 
 Then add manually the PPA repository editing the file `/etc/apt/source.list`.
-```
+```bash
 deb http://ppa.launchpad.net/hanipouspilot/rtlwifi/ubuntu xenial main 
 # deb-src http://ppa.launchpad.net/hanipouspilot/rtlwifi/ubuntu xenial main
 
 ```
 
 Now you have to install the packages below.
-```
+```bash
 sudo apt update
 sudo apt install rtlwifi-new-dkms linux-firmware
 ```

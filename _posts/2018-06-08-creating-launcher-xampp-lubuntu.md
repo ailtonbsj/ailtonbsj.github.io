@@ -8,7 +8,7 @@ The script installer of XAMPP don't create a default launcher for the applicatio
 
 We can start the services with this commands:
 
-```
+```bash
 $ sudo /opt/lampp/lampp startapache
 $ sudo /opt/lampp/lampp startmysql
 $ sudo /opt/lampp/lampp startftp
@@ -16,7 +16,7 @@ $ sudo /opt/lampp/lampp startftp
 
 For to turnoff the services we using this:
 
-```
+```bash
 $ sudo /opt/lampp/lampp stopapache
 $ sudo /opt/lampp/lampp stopmysql
 $ sudo /opt/lampp/lampp stopftp

@@ -5,7 +5,7 @@ date:   2019-03-16 21:45:00 -0300
 categories: tutorial linux web
 ---
 This is a tutorial to install Php, MariaDB and PhpMyAdmin on Bionic Beaver:
-``` 
+```bash
 # Installing apache web server
 sudo apt install apache2
 sudo systemctl status apache2
