@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Installing wifi driver of Positivo Master N190I Notebook on ubuntu 18.04"
+title:  "Installing wifi driver of Positivo Master N190I Notebook on Ubuntu 18.04"
 date:   2018-12-10 11:09:00 -0300
 categories: tutorial linux driver
 ---

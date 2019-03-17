@@ -5,7 +5,7 @@ date:   2018-11-16 23:46:00 -0300
 categories: tutorial linux hacker
 ---
 This is a list of some utils command for linux and pentest:
-``` 
+```bash
 # Start webserver
 service apache2 start
 

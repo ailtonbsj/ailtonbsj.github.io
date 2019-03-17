@@ -11,7 +11,7 @@ Unfortunately Scratch 2 just works online, because the Adobe AIR it is no more s
 ## Installing Scratch 1.4 with Wine
 
 First you need install Wine:
-```
+```bash
 $ sudo apt update
 $ sudo apt install wine64
 $ wine WINEPREFIX
@@ -21,14 +21,14 @@ Then download the windows installer and execute it.
 
 [http://download.scratch.mit.edu/ScratchInstaller1.4.exe](http://download.scratch.mit.edu/ScratchInstaller1.4.exe)
 
-```
+```bash
 $ wine ScratchInstaller1.4.exe
 ```
 
 ## Instaling Scratch Berkely Snap
 
 Using this option you will need install snapd.
-```
+```bash
 $ sudo apt install snapd
 $ sudo snap install berkeleysnap
 ```
