@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Some utils commands and tools for Videos"
+title:  "Some utils commands and tools for multimedia"
 date:   2019-05-10 14:01:00 -0300
 categories: tutorial linux video
 ---
-This is a list of some utils command for linux tool for video:
+This is a list of some utils command for linux tool for multimedia:
 ```bash
 # Slice part of video in mp4
 # Where: --s start de time, -t is the duration of video
