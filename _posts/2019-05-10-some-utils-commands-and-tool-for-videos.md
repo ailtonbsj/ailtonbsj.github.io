@@ -9,4 +9,13 @@ This is a list of some utils command for linux tool for video:
 # Slice part of video in mp4
 # Where: --s start de time, -t is the duration of video
 ffmpeg -i source.mp4 -ss 00:00:10 -t 00:00:30 -vcodec copy -acodec copy output.mp4
+
+# Resize all images
+mogrify -resize 600 *.jpg
+
+# Change quality of all images
+mogrify -quality *.jpg
+
+# Convert all images
+mogrify -format png *.jpg
 ```
