@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Using YJ CH341A MinProgrammer on linux"
+title:  "Using YJ CH341A Mini Programmer on Linux"
 date:   2019-10-15 11:59:00 -0300
 categories: tutorial linux hardware
 ---
