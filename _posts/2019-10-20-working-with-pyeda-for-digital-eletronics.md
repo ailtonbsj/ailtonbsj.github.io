@@ -10,7 +10,7 @@ First of all let's to install the library. I'm using Ubuntu system, so:
 ```bash
 sudo apt install python3
 sudo apt install python3-dev
-sudo apt install python2-pip
+sudo apt install python3-pip
 pip3 install pyeda
 ```
 
