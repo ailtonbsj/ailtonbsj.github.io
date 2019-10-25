@@ -7,7 +7,7 @@ categories: tutorial linux video
 This is a list of some utils command for linux tool for multimedia:
 ```bash
 # Slice part of video in mp4
-# Where: --s start de time, -t is the duration of video
+# Where: --s initial time, -t is the duration of video
 ffmpeg -i src.mp4 -ss 00:00:10 -t 00:00:30 -vcodec copy -acodec copy out.mp4
 
 # Resize all images
