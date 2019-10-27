@@ -10,4 +10,6 @@ However the installation for using in Brazil is complex because need to install 
 
 Therefore I decided to fork the package from WPS community and change to add the language and fix the thumbnails of Lubuntu system that use LXDE.
 
-[You can download here!](#)
+[Click here to download the WPS Office 11 Pt-Br](https://drive.google.com/open?id=1YeRbDnYsv0epCFLRMKmoEsNoICzqZ1-L)
+
+[Click here to download the fonts from community of WPS- Office](http://kdl.cc.ksosoft.com/wps-community/download/fonts/wps-office-fonts_1.0_all.deb)
