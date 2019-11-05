@@ -12,10 +12,15 @@ ffmpeg -i src.mp4 -ss 00:00:10 -t 00:00:30 -vcodec copy -acodec copy out.mp4
 
 # Resize all images
 mogrify -resize 600 *.jpg
+mogrify -resize x400 *.jpg
+
 
 # Change quality of all images
 mogrify -quality *.jpg
 
 # Convert all images
 mogrify -format png *.jpg
+
+# Convert to pdf
+convert input.jpg -page a4 output.pdf
 ```
