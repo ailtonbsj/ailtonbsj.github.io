@@ -18,6 +18,7 @@ sudo apt install --install-recommends wine64
 sudo apt install --install-recommends winetricks
 sudo apt install --install-recommends wine-binfmt
 sudo apt install --install-recommends mono-complete
+sudo apt install fonts-wine
 ```
 
 Now we will to create a Wine Prefix.
