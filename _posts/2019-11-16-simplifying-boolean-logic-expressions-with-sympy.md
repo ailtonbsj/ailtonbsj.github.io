@@ -59,3 +59,7 @@ to_cnf(s2, True)
 to_cnf(s3, True)
 # Output: (a | b | c) & (c | ~a | ~b)
 ```
+
+## References
+
+ - [SymPy Docs](https://docs.sympy.org/latest/modules/logic.html)
