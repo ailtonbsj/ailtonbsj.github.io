@@ -76,6 +76,7 @@ categories: tutorial windows hardware
 ## Windows Explorer
 
 - Arquivo > Opções > Geral
+  - Selecione Meu Computador em "Abrir Explorador para"
   - Desative: Mostrar arquivos usados recentemente
   - Desative: Mostrar pastas mais usadas em Acesso rápido
 - Arquivo > Opções > Modo de Exibição
@@ -130,10 +131,28 @@ categories: tutorial windows hardware
 - Desative: Armazenar meu histórico de atividades neste dispositivo
 - Clique: Limpar histórico de atividades
 
+# Configurações > Atualização e Segurança > Windows Update
+
+- Alterar horário ativo: 7h as 23h
+
+# Configurações > Atualização e Segurança > Otimização de Entrega
+
+- Desative: Permitir downloads de outros computadores
+
+# Serviços (services.msc)
+
+- Windows Update: Parar e desativar
+
 ## Desktop
 
 - Delete: Microsoft Edge (Depois de instalar o Chrome ou Firefox)
 - Delete: desktop.ini
+
+# Habilite o .NET 3.5
+
+```
+Dism.exe /online /enable-feature /featurename:NetFX3 /All /Source:E:\sources\sxs /LimitAccess
+```
 
 ## To install
 
@@ -141,7 +160,15 @@ categories: tutorial windows hardware
   - Desmarque a opção de enviar estatísticas de uso
   - Defina como padrão
 - WPS Office
+  - Desmarque: Utilizar o WPS para abrir ficheiros pdf
+  - Instale como multicomponentes
 - GIMP
+- Adobe Reader
+  - Habilite as miniaturas
+- VLC
+- K-Lite Codec Pack
+- Fontes TTF de Terceiros
+- Libre Office
 - CCleaner
   - Customize Install. Desmarque tudo, menos Add Start Menu Shortcuts
   - Configure para não inicializar nem usar internet
