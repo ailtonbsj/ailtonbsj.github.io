@@ -48,7 +48,34 @@ sudo mysql -u root -p
 # GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
 # FLUSH PRIVILEGES;
 ```
-Now you can use phpmyadmin with user admin!!!
+
+## Fix bug on phpMyAdmin
+
+On terminal type this:
+```bash
+sudo nano +613 /usr/share/phpmyadmin/libraries/sql.lib.php
+```
+
+Replace this code:
+```php
+((empty($analyzed_sql_results['select_expr']))
+    || (count($analyzed_sql_results['select_expr'] == 1)
+        && ($analyzed_sql_results['select_expr'][0] == '*')))
+```
+
+With this code:
+```php
+((empty($analyzed_sql_results['select_expr']))
+    || (count($analyzed_sql_results['select_expr']) == 1)
+        && ($analyzed_sql_results['select_expr'][0] == '*'))
+```
+
+You have to restart apache:
+```bash
+sudo systemctl restart apache2
+```
+
+Now you can use phpMyAdmin with user `admin` and password `123`.
 
 ### References
 
