@@ -34,30 +34,30 @@ sudo apt install --no-install-recommends appsedu-menus
 
 ## Apps available divided by discipline
 
-![](/assets/appsedu/appsedu/01.jpg)
+![](/assets/appsedu/01.jpg)
 
-![](/assets/appsedu/appsedu/02.jpg)
+![](/assets/appsedu/02.jpg)
 
-![](/assets/appsedu/appsedu/03.jpg)
+![](/assets/appsedu/03.jpg)
 
-![](/assets/appsedu/appsedu/04.jpg)
+![](/assets/appsedu/04.jpg)
 
-![](/assets/appsedu/appsedu/05.jpg)
+![](/assets/appsedu/05.jpg)
 
-![](/assets/appsedu/appsedu/06.jpg)
+![](/assets/appsedu/06.jpg)
 
-![](/assets/appsedu/appsedu/07.jpg)
+![](/assets/appsedu/07.jpg)
 
-![](/assets/appsedu/appsedu/08.jpg)
+![](/assets/appsedu/08.jpg)
 
-![](/assets/appsedu/appsedu/09.jpg)
+![](/assets/appsedu/09.jpg)
 
-![](/assets/appsedu/appsedu/10.jpg)
+![](/assets/appsedu/10.jpg)
 
-![](/assets/appsedu/appsedu/11.jpg)
+![](/assets/appsedu/11.jpg)
 
-![](/assets/appsedu/appsedu/12.jpg)
+![](/assets/appsedu/12.jpg)
 
-![](/assets/appsedu/appsedu/13.jpg)
+![](/assets/appsedu/13.jpg)
 
-![](/assets/appsedu/appsedu/14.jpg)
+![](/assets/appsedu/14.jpg)
