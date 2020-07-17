@@ -18,7 +18,7 @@ Appsedu is an package to install a lot of educational apps. You can install all 
 3- Install the educational apps you want.
 
 Example:
-
+    
 ```bash
 sudo apt install logisim-evolution
 sudo apt install physion-wine
@@ -61,3 +61,9 @@ sudo apt install --no-install-recommends appsedu-menus
 ![](/assets/appsedu/13.jpg)
 
 ![](/assets/appsedu/14.jpg)
+
+![](/assets/appsedu/15.jpg)
+
+![](/assets/appsedu/16.jpg)
+
+![](/assets/appsedu/17.jpg)
