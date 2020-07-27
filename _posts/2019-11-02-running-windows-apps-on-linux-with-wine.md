@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Running Windows Apps on linux with Wine"
+title:  "Running Windows Apps on Lubuntu 20.04 with Wine"
 date:   2019-10-20 14:44:00 -0300
 categories: tutorial linux windows
 ---
@@ -17,6 +17,7 @@ Now let's installing the necessaries packages of wine.
 sudo apt install --install-recommends wine64
 sudo apt install --install-recommends winetricks
 sudo apt install --install-recommends wine-binfmt
+sudo apt install --install-recommends winbind
 sudo apt install --install-recommends mono-complete
 sudo apt install fonts-wine
 ```
@@ -34,18 +35,18 @@ wine start control
 wine start notepad.exe
 winecfg
 ```
-We need to download some MSI packages of mono and gecko to improve wine.
+We need to download some MSI packages of [Mono](https://wiki.winehq.org/Mono) and [Gecko](https://wiki.winehq.org/Gecko) to improve wine.
 
-- [wine-mono-4.9.4.msi](http://dl.winehq.org/wine/wine-mono/4.9.4/wine-mono-4.9.4.msi)
-- [wine_gecko-2.47-x86.msi](http://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86.msi)
-- [wine_gecko-2.47-x86_64.msi](http://dl.winehq.org/wine/wine-gecko/2.47/wine_gecko-2.47-x86_64.msi)
+- [wine-mono-x86.msi](https://dl.winehq.org/wine/wine-mono/5.1.0/wine-mono-5.1.0-x86.msi)
+- [wine_gecko-x86.msi](http://dl.winehq.org/wine/wine-gecko/2.47.1/wine-gecko-2.47.1-x86.msi)
+- [wine_gecko-x86_64.msi](http://dl.winehq.org/wine/wine-gecko/2.47.1/wine-gecko-2.47.1-x86_64.msi)
 
 Let's install the packages on wine.
 
 ```bash
-wine msiexec /i wine-mono-4.9.3.msi
-wine msiexec /i wine_gecko-2.47-x86_64.msi
-wine msiexec /i wine_gecko-2.47-x86.msi
+wine msiexec /i ./wine-mono-5.1.0-x86.msi
+wine msiexec /i ./wine-gecko-2.47.1-x86_64.msi
+wine msiexec /i ./wine-gecko-2.47.1-x86.msi
 ```
 
 We need install some extra packages like .NET and Visual C++.
