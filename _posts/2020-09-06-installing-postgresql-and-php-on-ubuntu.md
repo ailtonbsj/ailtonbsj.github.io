@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Installing PHP with PostgreSQL on Ubuntu"
+title:  "Installing PostgreSQL and PHP on Ubuntu"
 date:   2020-09-06 23:09:00 -0300
 categories: tutorial postgresql php
 ---
@@ -20,7 +20,23 @@ sudo apt update
 Now we will install Postgree:
 
 ```bash
+# Install PostgreSQL
 sudo apt install postgresql
+
+# Check status of deamon
+systemctl status postgresql
+
+# Enter in root account
+sudo su
+
+# Switch to user postgres
+su - postgres
+
+# Run postgre client CLI
+psql
+
+# Change password (set as default: postgre)
+\password postgres
 ```
 
 For fininish lets install pgAdmin:
