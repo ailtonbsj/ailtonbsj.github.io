@@ -4,18 +4,28 @@ title:  "Installing PHP with PostgreSQL on Ubuntu"
 date:   2020-09-06 23:09:00 -0300
 categories: tutorial postgresql php
 ---
-First we will install PostgreSQL and PgAdmin4:
+First we will add the official Postgre repository:
 
 ```bash
 # Add keys of repository
-curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
 # Add repository
-echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" | sudo tee /etc/apt/sources.list.d/pgadmin4.list
+echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
 
 # Update list of packages
 sudo apt update
+```
 
+Now we will install Postgree:
+
+```bash
+sudo apt install postgresql
+```
+
+For fininish lets install pgAdmin:
+
+```bash
 # Install both desktop and web modes apps
 sudo apt install pgadmin4
 
