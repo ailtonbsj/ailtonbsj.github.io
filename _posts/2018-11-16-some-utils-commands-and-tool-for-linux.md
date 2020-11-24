@@ -137,4 +137,7 @@ hydra -l admin -x 2:2:a site.com http-form "path.php:login=^USER^&pw=^PASS^:Deny
 proxychains firefox
 proxychains nmap
 
+# Compute bcrypt hash
+htpasswd -bnBC 10 "" HereIsMyPassWord | tr -d ':\n'
+
 ```
