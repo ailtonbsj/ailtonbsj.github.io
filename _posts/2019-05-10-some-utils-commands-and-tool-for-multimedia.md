@@ -23,4 +23,36 @@ mogrify -format png *.jpg
 
 # Convert to pdf
 convert input.jpg -page a4 output.pdf
+
+# Crop multiples images with size and offset
+convert -extract 150x150+0+0 *.jpg prefix.jpg
+
+# Image to Text OCR
+sudo apt install tesseract-ocr
+
+```
+
+This script automatic rename photos with text inside:
+```bash
+#!/bin/bash
+
+# DESCRIPTION: Rename image based of content using OCR
+# USAGE:
+#   /script.sh *.jpg
+
+for f in "$@"; do
+    #convert -extract 181x85+0+0 input.jpg s1.jpg
+    convert -extract 55x24+135+25 "$f" /tmp/s1.jpg
+
+    #convert -extract 181x85+0+85 input.jpg s2.jpg
+    convert -extract 181x40+0+130 "$f" /tmp/s2.jpg
+
+    convert -density 300 /tmp/s1.jpg -colorspace Gray -negate -depth 8 -strip -background white -alpha off /tmp/1.tiff
+    convert -density 300 /tmp/s2.jpg -colorspace Gray -depth 8 -strip -background white -alpha off /tmp/2.tiff
+
+    tesseract --psm 7  /tmp/1.tiff /tmp/1
+    tesseract --psm 7  /tmp/2.tiff /tmp/2
+
+    mv "$f" "$(sed 's/[^0-9]//g' /tmp/1.txt),$(sed 's/[^A-Za-z ]//g' /tmp/2.txt | xargs).jpg"
+done
 ```
