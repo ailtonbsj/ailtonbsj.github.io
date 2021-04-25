@@ -7,19 +7,27 @@ categories: tutorial linux video
 This is a list of some utils command for linux tool for multimedia:
 ```bash
 # Slice part of video in mp4
-# Where: --s initial time, -t is the duration of video
+# Where:
+# -ss   is initial time position,
+# -to   is final time position,
+# -t    is the duration of video
 ffmpeg -i src.mp4 -ss 00:00:10 -t 00:00:30 -vcodec copy -acodec copy out.mp4
 
 # Resize all images
 mogrify -resize 600 *.jpg
 mogrify -resize x400 *.jpg
 
+# Remove EXIF and apply rotation
+mogrify -auto-orient *.jpg
+
+# Remove EXIF
+mogrify -strip *.jpg
 
 # Change quality of all images
 mogrify -quality *.jpg
 
 # Convert all images
-mogrify -format png *.jpg
+mogrify -format png -path out *.jpg
 
 # Convert to pdf
 convert input.jpg -page a4 output.pdf
@@ -30,7 +38,28 @@ convert -extract 150x150+0+0 *.jpg prefix.jpg
 # Image to Text OCR
 sudo apt install tesseract-ocr
 
+# Autocrop images
+autocrop -i folderIn -o folderOut -r folderErr
+
 ```
+This script rename files sequentially:
+```bash
+#!/bin/bash
+
+# DESCRIPTION: Rename a lot of files sequentially
+# USAGE:
+#   ./thisscript.sh *.jpg
+
+filesArr=("$@")
+sizeFiles="${#filesArr[@]}"
+totalDigits=${#sizeFiles}
+counter=0
+for f in "$@"; do
+	((counter++))
+	mv $f $(printf "%0""$totalDigits""d.${f##*.}" $counter)
+done
+```
+
 
 This script automatic rename photos with text inside:
 ```bash
@@ -38,7 +67,7 @@ This script automatic rename photos with text inside:
 
 # DESCRIPTION: Rename image based of content using OCR
 # USAGE:
-#   /script.sh *.jpg
+#   ./thisscript.sh *.jpg
 
 for f in "$@"; do
     #convert -extract 181x85+0+0 input.jpg s1.jpg
