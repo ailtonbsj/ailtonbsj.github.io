@@ -11,7 +11,9 @@ This is a list of some utils command for linux tool for multimedia:
 # -ss   is initial time position,
 # -to   is final time position,
 # -t    is the duration of video
+ffmpeg -i src.mp4 -ss 00:00:10 -to 00:00:40 -vcodec libx264 -acodec copy out.mp4
 ffmpeg -i src.mp4 -ss 00:00:10 -t 00:00:30 -vcodec copy -acodec copy out.mp4
+
 
 # Resize all images
 mogrify -resize 600 *.jpg
