@@ -87,3 +87,23 @@ for f in "$@"; do
     mv "$f" "$(sed 's/[^0-9]//g' /tmp/1.txt),$(sed 's/[^A-Za-z ]//g' /tmp/2.txt | xargs).jpg"
 done
 ```
+
+Downloadings video and audio from Youtube
+```bash
+# Download video or playlist
+youtube-dl https://youtu.be/rHCCv-sJknc
+
+# Download audio
+youtube-dl -x --audio-format mp3 https://youtu.be/rHCCv-sJknc
+
+# Download by format. eg.: 140 is audio format code
+youtube-dl -f bestaudio https://youtu.be/rHCCv-sJknc
+youtube-dl -f best https://youtu.be/rHCCv-sJknc
+youtube-dl -f 140 https://youtu.be/rHCCv-sJknc
+
+# List all formats available
+youtube-dl -F https://youtu.be/rHCCv-sJknc
+
+# Convert m4a to mp3
+ffmpeg -i input.m4a output.mp3
+```

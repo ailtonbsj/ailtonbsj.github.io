@@ -8,8 +8,10 @@ We can use OpenSSL to do a several operations related with cryptography. The com
 
 ## Symmetric-key Encryption
 ```bash
-# List all Ciphers
+# List all Ciphers commands and algorithms
+openssl list -cipher-commands
 openssl list -cipher-algorithms
+
 
 # AES encryption
 openssl aes-256-cbc -in inseguro.txt -out seguro_aes.txt -pass pass:minhasenha

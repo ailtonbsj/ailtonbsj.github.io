@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Some utils commands and tools for Linux"
-date:   2018-11-16 23:46:00 -0300
+title: "Some utils commands and tools for Linux"
+date: 2018-11-16 23:46:00 -0300
 categories: tutorial linux hacker
 ---
 This is a list of some utils command for linux and pentest:
@@ -81,9 +81,6 @@ mysql -uroot -p
 # Compile C code to x86 in x64 enviroment
 gcc -m32 yourcode.c -o yourcode -pthread
 
-# See rules of Firewall
-iptables -nL
-
 # Tunnel SSH for reverse conection
 ssh -fN 443:localhost:22 root@myvpsserver
 
@@ -92,9 +89,6 @@ rsync -Cravzp /path/of/origin user@remotemachine:/path/of/destiny
 
 # to ping several hosts
 fping -c1 -g 192.168.1.0 192.168.1.255
-
-# Avoid ICMP packages
-iptables -A INPUT -p icmp --icmp-type 8 -d 192.168.1.0/24 -j DROP
 
 # Mount packages TCP/IP
 hping3 --fin --syn --rst --ack --urg -c 4 -p 80 192.168.1.1
@@ -111,9 +105,6 @@ arp -a
 
 # ARP Poisoning Attack
 arpspoof -i eth0 -t 192.168.0.28 -r 192.168.0.13
-
-# Enable Global Routing
-echo 1 > /proc/sys/net/ipv4/ip_forward
 
 # DNS Poisoning Attack
 dnsspoof -i eth0
