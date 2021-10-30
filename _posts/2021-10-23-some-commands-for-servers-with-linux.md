@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some commands for servers with linux"
-date: 2018-11-16 23:46:00 -0300
+date: 2021-10-23 20:00:00 -0300
 categories: tutorial linux server
 ---
 This is a list of some utils commands for servers linux:
