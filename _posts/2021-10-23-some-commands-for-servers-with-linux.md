@@ -112,7 +112,6 @@ getfacl file.txt
 # Set ACL on file for user and group
 setfacl -m user:jose.ailton:rwx -d file.txt
 setfacl -m group:"EMPRESA\Domain Admins":rwx -d file.txt
-```
 
 # Get all extended attributes
 getfattr file.txt
@@ -125,6 +124,7 @@ setfattr -n user.author -v "Jose Ailton" file.txt
 
 # Change default group of file
 chgrp "EMPRESA\Domain Admins" file.txt
+```
 
 ## Network commands
 
