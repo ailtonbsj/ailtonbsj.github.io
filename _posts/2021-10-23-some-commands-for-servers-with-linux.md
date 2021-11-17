@@ -178,6 +178,14 @@ systemctl restart networking.service
 vim /etc/hosts
 # Append line:
 ## 192.168.2.1 serverdc01.empresa.intra serverdc01
+
+vim /etc/hosts.allow
+# Append:
+## sshd: 192.168.2.100: spawn /bin/echo "$(date) New conection by IP %a" >> /var/log/tcpwrappers-allow-ssh.log
+
+vim /etc/hosts.deny
+# Append:
+## ALL: ALL: spawn /bin/echo "$(date) Conection denied to IP %a" >> /var/log/tcpwrappers-deny.log
 ```
 
 ## Samba and AD
@@ -202,6 +210,55 @@ samba-tool domain provision --use-rfc2307 --use-xattrs=yes --use-ntvfs --interac
 ## Admin pass: [Strong password]
 ## Then copy kerberos conf file:
 cp /var/lib/samba/private/krb5.conf /etc/
+
+#################################################################################
+# Provisioning samba as AD
+samba-tool domain provision \
+--realm="empresa.intra" \
+--domain="empresa" \
+--server-role="dc" \
+--dns-backend="BIND9_DLZ" \
+--adminpass="[StrongPass]" \
+--function-level="2008_R2" \
+--site="empresa.intra" \
+--host-ip="192.168.2.1" \
+--option="interfaces = lo eth0" \
+--option="bind interfaces only = yes" \
+--option="allow dns updates = nonsecure and secure" \
+--option="dns forwarder = 10.0.2.3" \
+--option="winbind use default domain = yes" \
+--option="winbind enum users = yes" \
+--option="winbind enum groups = yes" \
+--option="winbind refresh tickets = yes" \
+--option="server signing = auto" \
+--option="vfs objects = acl_xattr" \
+--option="map acl inherit = yes" \
+--option="store dos attributes = yes" \
+--option="client use spnego = no" \
+--use-rfc2307 \
+--use-xattrs=yes \
+--use-ntvfs
+
+#
+samba-tool user setexpiry administrator --noexpiry
+
+#
+vim /var/lib/samba/private/named.conf
+
+#
+vim /etc/bind/named.conf
+
+#
+vim /etc/bind/named.conf.options
+
+#
+vim /etc/bind/named.conf.local
+
+rndc-confgen -a
+chown root:bind /etc/bind/rndc.key
+chmod 640 /etc/bind/rndc.key
+ln /etc/bind/rndc.key /etc/dhcp/ddns-keys/rndc.key
+#################################################################################
 
 # Check level of AD
 samba-tool domain level show
@@ -410,7 +467,7 @@ cid status
 
 ```bash
 # Install WINBIND
-apt install winbind quota quotatool ldb-tools libnss-winbind libpam-winbind
+apt install winbind ldb-tools libnss-winbind libpam-winbind
 
 vim /etc/nsswitch.conf
 # Edit lines:
@@ -446,4 +503,69 @@ getent group "G-Financeiro"
 
 # Display details on remote ADS server
 net ads info
+```
+
+## NFS Server commands
+
+```bash
+# Install nfs
+apt install nfs-kernel-server nfs-common
+```
+
+## BIND
+
+```bash
+# Install bind
+apt install bind9 bind9utils
+```
+
+## ClamAV
+
+```bash
+# Install clamAV
+apt install clamav clamav-daemon
+
+# Update virus database
+freshclam
+
+# Update virus database unofficial
+clamav-unofficial-sigs
+
+# Check status daemons
+systemctl status clamav-daemon.service
+systemctl status clamav-freshclam.service
+
+# Scan for virus
+wget -c -P /some-folder http://www.eicar.org/download/eicar.com
+cp -v /some-folder/eicar.com /some-folder/eicar.bat
+bzip2 -v /some-folder/eicar.bat
+clamscan -r -i -v /some-folder --move=/quarentena
+clamscan -r -i -v /quarentena --remove
+```
+
+## Cron
+
+```bash
+# Schedule clamAV on cron
+echo "30 22 * * * root clamscam -r -i -v /folder --move=/quarentena --log=/var/log/scan-file.log" > /etc/cron.d/clamav
+echo "30 21 * * * root freshclam" > /etc/cron.d/freshclam
+```
+
+## Quota
+
+```bash
+# Install packages
+apt install quota quotatool
+
+vim /etc/fstab
+## Add options: defaults,barrier=1,grpquota,usrquota
+
+# Check quota
+quotacheck -ugcv /arquivos
+```
+
+## LAMP
+
+```bash
+apt install phpldapadmin links2
 ```

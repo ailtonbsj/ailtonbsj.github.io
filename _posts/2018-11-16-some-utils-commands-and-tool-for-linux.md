@@ -131,4 +131,7 @@ proxychains nmap
 # Compute bcrypt hash
 htpasswd -bnBC 10 "" HereIsMyPassWord | tr -d ':\n'
 
+# List processes using port 8080 or other
+lsof -i :8080
+
 ```
