@@ -104,7 +104,7 @@ docker run -d --cpus=0.5 progrium/stress -c 8 -t 30s
 # List all networks
 docker network ls
 
-# Create net network
+# Create new network
 docker network create -d bridge petsBridge
 
 # Create containers using network in bridge mode
@@ -139,6 +139,16 @@ docker service ls
 docker service scale web=3
 ```
 
+# Docker Compose and Dockerfile
+
+```bash
+# Build a new image using a Dockerfile and run
+docker build -t image1 .
+docker run -d --name box1 image1
+```
+
+See [this project](https://github.com/ailtonbsj/dio-docker-101) created on Digital Innovation One / TQI Bootcamp.
+
 ## Other util commands
 
 ```bash
@@ -148,7 +158,3 @@ netstat -nltp
 # Create zero-file with 1MB
 dd if=/dev/zero of=file.0 bs=1024 count=1024
 ```
-
-# Docker Compose and Dockerfile
-
-See [this project](https://github.com/ailtonbsj/dio-docker-101) created on Digital Innovation One / TQI Bootcamp.
