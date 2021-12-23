@@ -48,3 +48,19 @@ cat text.txt | openssl dgst -sha256 | cut -f 2 -d " " > soma.txt
 cat sign.base64 | openssl enc -base64 -d > text.sig
 openssl pkeyutl -verify -pubin -inkey pub.pem -sigfile text.sig -in soma.txt
 ```
+
+## SSH RSA Keys (Asymmetric)
+```bash
+# Generate public and private keys
+ssh-keygen -t rsa -b 2048
+
+# Copy public key to remote host
+ssh-copy-id myuser@host.remote
+
+# Backup the publics keys then concatenate with your public key on remote host
+cp authorized_keys authorized_keys.bkp
+cat id_rsa.pub >> authorized_keys
+
+# Use other private key on ssh
+ssh -i /path/to/private/key myuser@host
+```
