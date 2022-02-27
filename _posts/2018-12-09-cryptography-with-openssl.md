@@ -49,6 +49,11 @@ cat sign.base64 | openssl enc -base64 -d > text.sig
 openssl pkeyutl -verify -pubin -inkey pub.pem -sigfile text.sig -in soma.txt
 ```
 
+## PKCS#10 X.509 Certificate Signing Request (CSR) Management
+```bash
+openssl req -x509 -newkey rsa:2048 -keyout private_key.pem -out public_cert.pem -days 365
+```
+
 ## SSH RSA Keys (Asymmetric)
 ```bash
 # Generate public and private keys
