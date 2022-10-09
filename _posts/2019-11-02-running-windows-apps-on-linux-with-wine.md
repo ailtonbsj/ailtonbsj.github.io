@@ -80,6 +80,9 @@ winetricks dotnet46
 # Visual C++ libraris 2012
 winetricks vcrun2012
 
+# Extra fonts
+winetricks tahoma corefonts ie8
+
 ...
 ```
 
