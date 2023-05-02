@@ -82,3 +82,20 @@ whatsapp://send/?phone=YOUR_PHONE_NUMBER&text=TEXT_URL_ENCODED
 
 whatsapp://send?text=TEXT_URL_ENCODED
 ```
+
+## Enable clicks on links (Don't works on Chrome)
+
+```bash
+# Open Registry Editor
+wine regedit
+
+# Go to: HKEY_CURRENT_USER\Software\Wine\WineBrowser
+# Create String Value: Browsers
+# Set with: firefox,xdg-open,konqueror,mozilla,netscape,galeon,opera,dillo
+
+# Go to: HKEY_CLASSES_ROOT\http\shell\open\command
+# Set Default: "C:\windows\system32\winebrowser.exe" "%1"
+
+# Go to: HKEY_CLASSES_ROOT\https\shell\open\command
+# Set Default: "C:\windows\system32\winebrowser.exe" "%1"
+```
