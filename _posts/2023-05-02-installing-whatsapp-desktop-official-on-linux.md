@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing WhatsApp Desktop official on Linux"
-date: 2023-05-2 12:30:00 -0300
+date: 2023-05-02 12:30:00 -0300
 categories: tutorial linux wine
 ---
 In this tutorial I'll show you how to install WhatsApp Desktop official using WineHQ staging.
