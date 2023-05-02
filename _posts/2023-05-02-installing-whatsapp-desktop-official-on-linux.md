@@ -42,7 +42,7 @@ update_winetricks
 winetricks dotnet45
 # Make sure to run this command with any others wine app running, or winetrick will waiting process finished!
 
-# You need to change version to Windows 10
+# IMPORTANT: You need to change version to Windows 7
 winecfg
 ```
 
