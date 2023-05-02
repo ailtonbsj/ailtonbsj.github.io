@@ -85,6 +85,8 @@ whatsapp://send?text=TEXT_URL_ENCODED
 
 ## Enable clicks on links (Don't works on Chrome)
 
+You will need Firefox without snap. You can see [my vídeo about how install](https://youtu.be/sUMBewTIJQg). 
+
 ```bash
 # Open Registry Editor
 wine regedit
