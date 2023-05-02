@@ -30,6 +30,9 @@ sudo apt install --install-recommends winehq-staging
 # Start a Wine Prefix
 wineboot -u
 # A Wine Mono window will prompted. Click on button Install
+
+wine iexplore
+# Open IExplorer. A Wine Gecko window will prompted. Click on button Install
 ```
 
 You need to install Winetricks using Github script provided by [README.md Winetrick Repository](https://github.com/Winetricks/winetricks). After run the script you can do:
@@ -56,10 +59,11 @@ The WhatsApp Desktop is now installed. Click on title bar e drag to top for full
 
 ## Enable links from `whatsapp://`
 
-Open the launcher `WhatsApp (Outdated).desktop` with an text editor like vim, nano or mousepad and add the line bellow on end:
+Rename the launcher `WhatsApp (Outdated).desktop` as `WhatsApp.desktop` and open with an text editor like vim, nano or mousepad to modify with the follow parameters:
 
 ```bash
-# ~/.local/share/applications/wine/Programs/WhatsApp/WhatsApp (Outdated).desktop`
+# ~/.local/share/applications/wine/Programs/WhatsApp/WhatsApp (Outdated).desktop
+Exec=DONT_CHANGE_THE_WINE_COMMAND_HERE_JUST_ADD_THE_FINAL_ARGUMENT.lnk %u
 MimeType=x-scheme-handler/whatsapp;
 
 # Update cache database of MIME types
