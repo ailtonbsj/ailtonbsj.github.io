@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Installing WhatsApp Desktop official on Linux"
+title: "Installing WhatsApp Desktop official on Linux with WineHQ"
 date: 2023-05-02 00:30:00 -0300
 categories: tutorial linux wine
 ---
@@ -20,8 +20,14 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-bui
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
 
 # Remove all others wine version
-sudo apt remove --purge wine*
+sudo apt remove --purge wine* fonts-wine
 sudo apt autoremove
+
+# Delete .wine folder
+# THIS WILL DELETE ALL WINE APPS!
+rm -rf ~/.wine
+
+# Delete .cache folder and reboot
 
 # Install Wine Staging
 sudo apt update
@@ -33,17 +39,6 @@ wineboot -u
 
 wine iexplore
 # Open IExplorer. A Wine Gecko window will prompted. Click on button Install
-```
-
-You need to install Winetricks using Github script provided by [README.md Winetrick Repository](https://github.com/Winetricks/winetricks). After run the script you can do:
-
-```bash
-# Update Winetrick to last version
-update_winetricks
-
-# Install .NET 4.5
-winetricks dotnet45
-# Make sure to run this command with any others wine app running, or winetrick will waiting process finished!
 
 # IMPORTANT: You need to change version to Windows 7
 winecfg
@@ -62,7 +57,7 @@ The WhatsApp Desktop is now installed. Click on title bar e drag to top for full
 Rename the launcher `WhatsApp (Outdated).desktop` as `WhatsApp.desktop` and open with an text editor like vim, nano or mousepad to modify with the follow parameters:
 
 ```bash
-# ~/.local/share/applications/wine/Programs/WhatsApp/WhatsApp (Outdated).desktop
+# ~/.local/share/applications/wine/Programs/WhatsApp/WhatsApp.desktop
 Exec=DONT_CHANGE_THE_WINE_COMMAND_HERE_JUST_ADD_THE_FINAL_ARGUMENT.lnk %u
 MimeType=x-scheme-handler/whatsapp;
 
@@ -85,7 +80,7 @@ whatsapp://send?text=TEXT_URL_ENCODED
 
 ## Enable clicks on links (Don't works on Chrome)
 
-You will need Firefox without snap. You can see [my vídeo about how install](https://youtu.be/sUMBewTIJQg). 
+You will need Firefox without snap. You can see [my video about how install](https://youtu.be/sUMBewTIJQg). 
 
 ```bash
 # Open Registry Editor
