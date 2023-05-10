@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing Intelbras SIM Next on Linux with HQ"
-date: 2023-05-10 14:00:00 -0300
+date: 2023-05-10 14:10:00 -0300
 categories: tutorial linux wine
 ---
 In this next tutorial we will learn how to install Intelbras SIM Next software on a Linux using Xubuntu 22.04 distribution.
