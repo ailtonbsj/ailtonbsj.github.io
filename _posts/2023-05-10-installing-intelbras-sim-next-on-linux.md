@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Installing Intelbras SIM Next on Linux with HQ"
+title: "Installing Intelbras SIM Next on Linux with WineHQ"
 date: 2023-05-10 14:10:00 -0300
 categories: tutorial linux wine
 ---
@@ -61,5 +61,5 @@ winecfg
 Now we need to download the [IntelBras Sim Next](https://www.intelbras.com/pt-br/sistema-inteligente-de-monitoramento-sim-next#suporte). Extract the executable and run the command bellow:
 
 ```bash
-wine SIMNext__Setup_v1.21.9_Offline
+wine SIMNext__Setup_v1.21.9_Offline.exe
 ```
