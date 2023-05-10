@@ -35,3 +35,15 @@ Type the name of package and click on it.
 | [Bracket​Highlighter](https://packagecontrol.io/packages/BracketHighlighter)                   | Bracket and tag highlighter.  |                      |
 | [Markdown HTML Preview](https://packagecontrol.io/packages/Markdown%20HTML%20Preview)         | Markdown HTML Preview         | Ctrl+Shift+M         |
 
+## Some iteresting packages
+
+---
+Nome: [HTML5](https://packagecontrol.io/packages/HTML5)
+Description: Snippets for HTML5.
+Commands: html5
+---
+Nome: [HTML Snippets](https://packagecontrol.io/packages/HTML%20Snippets)  
+Description: Snippets for HTML.
+Commands: doctype, meta, lorem
+---
+
