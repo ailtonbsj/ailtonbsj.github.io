@@ -28,3 +28,4 @@ xfce4-settings-editor
 ## References
 
 [https://git.xfce.org/xfce/xfconf/tree/docs/spec/perchannel-xml.txt](https://git.xfce.org/xfce/xfconf/tree/docs/spec/perchannel-xml.txt)
+[https://github.com/winunix/kiosk-mode-xfce4](https://github.com/winunix/kiosk-mode-xfce4)
