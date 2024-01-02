@@ -22,6 +22,7 @@ sudo apt install --install-recommends winetricks
 sudo apt install --install-recommends wine-binfmt
 sudo apt install --install-recommends winbind
 sudo apt install --install-recommends mono-complete
+sudo apt install cabextract
 sudo apt install fonts-wine
 ```
 
