@@ -40,4 +40,16 @@ lpadmin -x printername
 
 # Enable share printers
 cupsctl --share-printers
+
+# List all printer added
+lpstat -a
+lpstat -p
+lpstat -v
+
+# Show all available printer on network
+lpstat -e
+
+# Show default printer
+lpstat -d
+
 ```
