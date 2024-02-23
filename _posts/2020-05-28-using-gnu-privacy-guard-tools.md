@@ -26,4 +26,11 @@ gpg --output private.key --armor --export-secret-key email.address
 # Store key
 gpg --import public.key
 gpg --import private.key
+
+# Encrypt some file
+gpg --encrypt --recipient KEY_UID --output encrypted.gpg text_file
+
+# Decrypt some file (first import secrect key)
+gpg --decrypt encrypted.gpg
+gpg --decrypt --output text_file encrypted.gpg
 ```
