@@ -34,9 +34,9 @@ sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/
 sudo apt update
 sudo apt install --install-recommends winehq-stable
 
-# Start a Wine Prefix
+# Start a Wine 32bit Prefix
 # A Wine Mono window will prompted. Click on button Install
-wineboot -u
+WINEARCH=win32 wineboot -u
 
 # Open IExplorer. A Wine Gecko window will prompted. Click on button Install
 wine iexplore
@@ -78,8 +78,11 @@ You need to install Winetricks using Github script provided by [README.md Winetr
 # Update Winetrick to last version
 update_winetricks
 
-# Install IE8
-winetricks ie8
+# Install IE7
+winetricks ie7
+
+# Add iertutil in library tab on Wine Configuration
+winecfg
 
 # On launcher, start OC4J Instance
 # On launcher, start Forms Builder
