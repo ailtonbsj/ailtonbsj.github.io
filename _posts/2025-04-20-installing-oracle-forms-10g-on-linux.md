@@ -93,8 +93,8 @@ winecfg
 # http://localhost:8889/forms/jinitiator/jinit.exe
 wine jinit.exe
 
-# Copy URL opened, and run on Wine IExplore
-wine iexplore
+# Copy URL opened, and run on IE7
+wine 'C:\Program Files\Internet Explorer\iexplore.exe'
 
 # Replace jvm.dll for a JDK 1.5 version
 # .wine/drive_c/Program Files (x86)/Oracle/JInitiator 1.3.1.22/bin/hotspot/
@@ -174,7 +174,7 @@ CREATE TABLE NOTA_FISCAL.CLIENTES (
 CREATE TABLE NOTA_FISCAL.PRODUTOS (
 	"CODIGO" NUMBER(38,0) NOT NULL ENABLE, 
 	"NOME" VARCHAR2(100) NOT NULL ENABLE,
-	"PRECO_UNITARIO" NUMBER(38,0),
+	"PRECO_UNITARIO" NUMBER(16,2),
 	 CONSTRAINT "PRODUTOS_PK" PRIMARY KEY ("CODIGO")
 );
 
@@ -195,6 +195,7 @@ ALTER TABLE
 CREATE TABLE NOTA_FISCAL.VENDAS_ITENS (
 	"VENDAS_ID" NUMBER(38,0), 
 	"QUANTIDADE" NUMBER(38,0), 
-	"PRODUTO_ID" NUMBER(38,0)
+	"PRODUTO_ID" NUMBER(38,0),
+	"UF" VARCHAR(2)
 );
 ```
