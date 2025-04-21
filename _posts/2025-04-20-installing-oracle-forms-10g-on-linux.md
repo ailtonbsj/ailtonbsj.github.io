@@ -45,13 +45,13 @@ WINEPREFIX=~/wine10g wine iexplore
 # IMPORTANT: You need to change version to Windows XP
 WINEPREFIX=~/wine10g winecfg
 
-# Copy file MemoryManagement.reg to ~/.wine/drive_c/
+# Copy file MemoryManagement.reg to ~/wine10g/drive_c/
 # Import reg file with regedit
-cd ~/.wine/drive_c/
+cd ~/wine10g/drive_c/
 WINEPREFIX=~/wine10g wine regedit
 
 # Copy installer folder Oracle_Developer_Suite_10g with Disk1 and Disk2 to ~/.wine/drive_c/
-cd ~/.wine/drive_c/Oracle_Developer_Suite_10g/Disk1/
+cd ~/wine10g/drive_c/Oracle_Developer_Suite_10g/Disk1/
 WINEPREFIX=~/wine10g wine setup.exe
 
 # Follow: Next > Next > Next > (*) Complete > Next > Next > Install > Exit > Yes
@@ -98,7 +98,7 @@ WINEPREFIX=~/wine10g wine jinit.exe
 WINEPREFIX=~/wine10g wine 'C:\Program Files\Internet Explorer\iexplore.exe'
 
 # Replace jvm.dll for a JDK 1.5 version
-# .wine/drive_c/Program Files (x86)/Oracle/JInitiator 1.3.1.22/bin/hotspot/
+# ~/wine10g/drive_c/Program Files (x86)/Oracle/JInitiator 1.3.1.22/bin/hotspot/
 ```
 
 ### Content of file `MemoryManagement.reg`
