@@ -30,28 +30,29 @@ sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-bui
 # Add the source file for 24.04 (noble)
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources
 
-# Install WineHQ
+# Install WineHQ and Mono
 sudo apt update
 sudo apt install --install-recommends winehq-stable
+sudo apt install --install-recommends mono-complete
 
 # Start a Wine 32bit Prefix
 # A Wine Mono window will prompted. Click on button Install
-WINEARCH=win32 wineboot -u
+WINEPREFIX=~/wine10g WINEARCH=win32 wineboot -u
 
 # Open IExplorer. A Wine Gecko window will prompted. Click on button Install
-wine iexplore
+WINEPREFIX=~/wine10g wine iexplore
 
 # IMPORTANT: You need to change version to Windows XP
-winecfg
+WINEPREFIX=~/wine10g winecfg
 
 # Copy file MemoryManagement.reg to ~/.wine/drive_c/
 # Import reg file with regedit
 cd ~/.wine/drive_c/
-wine regedit
+WINEPREFIX=~/wine10g wine regedit
 
 # Copy installer folder Oracle_Developer_Suite_10g with Disk1 and Disk2 to ~/.wine/drive_c/
 cd ~/.wine/drive_c/Oracle_Developer_Suite_10g/Disk1/
-wine setup.exe
+WINEPREFIX=~/wine10g wine setup.exe
 
 # Follow: Next > Next > Next > (*) Complete > Next > Next > Install > Exit > Yes
 # Reboot your system
@@ -79,10 +80,10 @@ You need to install Winetricks using Github script provided by [README.md Winetr
 update_winetricks
 
 # Install IE7
-winetricks ie7
+WINEPREFIX=~/wine10g winetricks ie7
 
 # Add iertutil in library tab on Wine Configuration
-winecfg
+WINEPREFIX=~/wine10g winecfg
 
 # On launcher, start OC4J Instance
 # On launcher, start Forms Builder
@@ -91,10 +92,10 @@ winecfg
 
 # Download and install the JInit
 # http://localhost:8889/forms/jinitiator/jinit.exe
-wine jinit.exe
+WINEPREFIX=~/wine10g wine jinit.exe
 
 # Copy URL opened, and run on IE7
-wine 'C:\Program Files\Internet Explorer\iexplore.exe'
+WINEPREFIX=~/wine10g wine 'C:\Program Files\Internet Explorer\iexplore.exe'
 
 # Replace jvm.dll for a JDK 1.5 version
 # .wine/drive_c/Program Files (x86)/Oracle/JInitiator 1.3.1.22/bin/hotspot/
