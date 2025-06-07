@@ -17,6 +17,7 @@ spd-say -L | grep pt-BR | less
 
 # Speak on terminal
 spd-say -l "pt-BR" "Sejam todos bem vindo."
+spd-say -y "Portuguese (Brazil)+Linda" "Sejam todos bem vindo."
 
 # Configure defaults values
 spd-conf
@@ -26,7 +27,10 @@ sudo apt install rhvoice
 sudo apt install rhvoice-brazilian-portuguese
 sudo apt install speech-dispatcher-rhvoice
 
-# List all voices in RHVoice module (high quality)
+# Remove local default values (need reboot)
+rm -rf /home/$USER/.config/speech-dispatcher
+
+# List all voices in RHVoice module (high quality) - Remove default values before
 spd-say -o rhvoice -L
 
 # Speak on terminal
@@ -34,18 +38,17 @@ echo "Sejam bem-vindos!" | RHVoice-test -p "Letícia-F123"
 spd-say -o rhvoice -y "Letícia-F123" "Sejam todos bem vindos!"
 spd-say -o rhvoice -l pt "Sejam todos bem vindos!"
 
-# Remove defaults confs
-rm -rf ~/.config/speech-dispatcher
-
-# Set all confs as default
-spd-conf
+# Set global confs
+# yes -> system -> espeak-ng -> pt-BR -> pulse -> 0 -> 0 -> 0 -> yes -> yes -> yes
+sudo spd-conf
 ```
 
-Now it's need to open the file `~/.config/speech-dispatcher/speechd.conf` and replace this line `#DefaultModule espeak-ng` with `DefaultModule rhvoice`. After that we will restart service:
+Now it's need to open the file `/etc/speech-dispatcher/speechd.conf` or `~/.config/speech-dispatcher/speechd.conf` and replace this line `#DefaultModule espeak-ng` with `DefaultModule rhvoice`. After that we will restart service:
 
 ```bash
 # Restart service
 sudo systemctl restart speech-dispatcher.service
+sudo reboot
 
 # Speak on terminal
 spd-say "Sejam todos bem vindos!"
