@@ -200,3 +200,7 @@ CREATE TABLE NOTA_FISCAL.VENDAS_ITENS (
 	"UF" VARCHAR(2)
 );
 ```
+
+## Watch my tutorial on Youtube
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/FMbqOEDlOKc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
