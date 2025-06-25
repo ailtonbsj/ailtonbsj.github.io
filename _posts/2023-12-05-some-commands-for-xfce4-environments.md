@@ -25,6 +25,10 @@ pkill xfsettingsd
 xfce4-settings-editor
 ```
 
+## Watch my tutorial on Youtube
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/-ICZ09rQS70" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ## References
 
 [https://git.xfce.org/xfce/xfconf/tree/docs/spec/perchannel-xml.txt](https://git.xfce.org/xfce/xfconf/tree/docs/spec/perchannel-xml.txt)
