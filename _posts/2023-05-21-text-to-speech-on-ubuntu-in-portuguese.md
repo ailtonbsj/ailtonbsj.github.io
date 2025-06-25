@@ -56,6 +56,10 @@ spd-say "Sejam todos bem vindos!"
 
 Now we can install Okular and configure TTS to speak in portuguese.
 
+## Watch my tutorial on Youtube
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/qiFCQsm-A7U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### References
 
 [https://wiki.archlinux.org/title/RHVoice](https://wiki.archlinux.org/title/RHVoice)
