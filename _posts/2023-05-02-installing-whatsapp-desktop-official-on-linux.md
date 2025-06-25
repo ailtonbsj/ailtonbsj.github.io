@@ -96,3 +96,7 @@ wine regedit
 # Go to: HKEY_CLASSES_ROOT\https\shell\open\command
 # Set Default: "C:\windows\system32\winebrowser.exe" "%1"
 ```
+
+## Watch my tutorial on Youtube
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/tcDeD7MJ-EI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
